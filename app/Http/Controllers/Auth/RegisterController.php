@@ -2,7 +2,7 @@
 
 namespace Agrinesia\Http\Controllers\Auth;
 
-use Agrinesia\User;
+use Agrinesia\Models\User;
 use Agrinesia\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;

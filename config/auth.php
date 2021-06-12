@@ -68,7 +68,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => Agrinesia\User::class,
+            'model' => Agrinesia\Models\User::class,
         ],
 
         // 'users' => [

@@ -1,6 +1,6 @@
 <?php
 
-namespace Agrinesia;
+namespace Agrinesia\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
