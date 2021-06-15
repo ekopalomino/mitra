@@ -14,5 +14,5 @@
 Auth::routes();
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function() {
-
+    Route::resource('dashboard','Admin\DashboardController');
 });
