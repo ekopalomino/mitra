@@ -35,7 +35,7 @@
         <!-- BEGIN LOGO -->
         <div class="logo">
             <a href="">
-                <img src="{{ asset('assets/fibertekno.jpg') }}" alt="" /> </a>
+                <img src="{{ asset('logo_front2.png') }}" alt="" /> </a>
         </div>
         <!-- END LOGO -->
         <!-- BEGIN LOGIN -->

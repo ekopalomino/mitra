@@ -121,25 +121,5 @@
         }
     @endif
 </script>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyD-v8A6bjxlgYW8wkCf19LN_bwu-bAYAqg",
-    authDomain: "fibertekno-f6b60.firebaseapp.com",
-    databaseURL: "https://fibertekno-f6b60.firebaseio.com",
-    projectId: "fibertekno-f6b60",
-    storageBucket: "fibertekno-f6b60.appspot.com",
-    messagingSenderId: "476403820677",
-    appId: "1:476403820677:web:1dfdb1afe594dfb8e421ec"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-</script>
 </html>
 
