@@ -1,6 +1,6 @@
 @extends('back.layouts.main')
 @section('header.title')
-Agrinesia Mitra Backend | User Management
+Agrinesia Sales Dashboard  | User Management
 @endsection
 @section('header.styles')
 <link href="{{ asset('assets/global/plugins/datatables/datatables.min.css') }}" rel="stylesheet" type="text/css" />

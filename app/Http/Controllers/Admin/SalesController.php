@@ -16,8 +16,11 @@ class SalesController extends Controller
 {
     public function mitraIndex()
     {
-        
-        return view('back.pages.mitraSales');
+        $data = MitraSale::select('mitra_name','area_code',DB::raw('sum(sales_val_a) as last_year'),DB::raw('sum(sales_val_b) as this_year'),DB::raw('sum(sales_target) as target'),DB::raw('sum(sales_val_b)/sum(sales_target) *100 as achievements'))
+                            ->groupBy('mitra_name','area_code')
+                            ->get();
+
+        return view('back.pages.mitraSales',compact('data'));
     }
 
     public function mitraImport(Request $request)

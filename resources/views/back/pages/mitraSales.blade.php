@@ -72,25 +72,26 @@ Agrinesia Sales Dashboard | Mitra Sales
                                 <th>No</th>
                 				<th>Nama Mitra</th>
                                 <th>Area</th>
-                                <th>Produk</th>
-                                <th>Varian</th>
-                                <th>Sales Value</th>
-                                <th>Sales Volume</th>
-                				<th></th>
+                                <th>Last Year Sales</th>
+                                <th>This Year Sales</th>
+                                <th>This Year Target</th>
+                				<th>Growth</th>
+                                <th>Achievement</th>
                 			</tr>
                 		</thead>
                 		<tbody>
+                            @foreach($data as $key => $sales)
                             <tr>
-                				<td></td>
+                				<td>{{ $key+1 }}</td>
+                                <td>{{ $sales->mitra_name }}</td>
+                                <td>{{ $sales->Areas->area_name }}</td>
+                                <td>{{ number_format($sales->last_year,0,',','.')}}</td>
+                                <td>{{ number_format($sales->this_year,0,',','.')}}</td>
+                                <td>{{ number_format($sales->target,0,',','.')}}</td>
                                 <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                			</tr>
-                            
+                                <td>{{ number_format($sales->achievements,0,',','.')}} %</td>
+                            </tr>
+                            @endforeach
                 		</tbody>
                 	</table>
                 </div>
@@ -107,14 +108,4 @@ Agrinesia Sales Dashboard | Mitra Sales
 @endsection
 @section('footer.scripts')
 <script src="{{ asset('assets/pages/scripts/table-datatables-buttons.min.js') }}" type="text/javascript"></script>
-<script>
-    function ConfirmDelete()
-    {
-    var x = confirm("Are you sure you want to deactivate?");
-    if (x)
-        return true;
-    else
-        return false;
-    }
-</script>
 @endsection
