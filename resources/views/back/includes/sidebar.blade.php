@@ -69,27 +69,27 @@
                 </a>
                 <ul class="sub-menu">
                     <li class="nav-item ">
-                        <a href="" class="nav-link ">
-                            <span class="title">Registrasi Mitra Baru</span>
+                        <a href="https://form.jotform.com/211382211585450" target="_blank" class="nav-link ">
+                            <span class="title">Registrasi Mitra A</span>
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a href="" class="nav-link ">
-                            <span class="title">Registrasi Mitra via Medsos</span>
+                        <a href="https://form.jotform.com/211742404259452" target="_blank" class="nav-link ">
+                            <span class="title">Registrasi Mitra B</span>
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a href="" class="nav-link ">
+                        <a href="https://form.jotform.com/211381996615463" target="_blank" class="nav-link ">
                             <span class="title">Pengajuan Rute Pengiriman</span>
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a href="" class="nav-link ">
+                        <a href="https://form.jotform.com/211382456773460" target="_blank" class="nav-link ">
                             <span class="title">Kunjungan Staff</span>
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a href="" class="nav-link ">
+                        <a href="https://form.jotform.com/211381723971456" target="_blank" class="nav-link ">
                             <span class="title">Kunjungan SPV/AM</span>
                         </a>
                     </li>
