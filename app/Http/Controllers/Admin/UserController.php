@@ -20,7 +20,7 @@ class UserController extends Controller
         return view('back.pages.users',compact('users','roles'));
     }
 
-    public function userProfile()
+    public function userProfile() 
     {
         $user = Auth::user();
         $locations = Auth::user()->warehouses;
@@ -272,5 +272,11 @@ class UserController extends Controller
         ); 
         return redirect()->route('role.index')
                         ->with($notification);
+    }
+
+    public function logIndex()
+    {
+        $logs = \LogActivity::logActivityLists();
+        return view('back.pages.logActivity',compact('logs'));
     }
 }

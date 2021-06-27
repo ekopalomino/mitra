@@ -11,4 +11,9 @@ class HomeController extends Controller
     {
         return view('front.pages.home');
     }
+
+    public function bogorIndex()
+    {
+        return view('front.pages.bogor');
+    }
 }

@@ -10,7 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', ['as' => 'home', 'uses' => 'front\HomeController@index']);
+Route::get('/', ['as' => 'home', 'uses' => 'Front\HomeController@index']);
+Route::get('area-bogor','Front\HomeController@bogorIndex')->name('bogor.index');
 /* Route::get('/', function () {
     return view('welcome');
 });

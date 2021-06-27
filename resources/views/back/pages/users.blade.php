@@ -1,6 +1,6 @@
-@extends('apps.layouts.main')
+@extends('back.layouts.main')
 @section('header.title')
-Agrinesia Mitra Dashboard | User Management
+Agrinesia Mitra Backend | User Management
 @endsection
 @section('header.styles')
 <link href="{{ asset('assets/global/plugins/datatables/datatables.min.css') }}" rel="stylesheet" type="text/css" />
@@ -29,7 +29,6 @@ Agrinesia Mitra Dashboard | User Management
                                 </ul>
                         </div>
                     @endif
-                    @can('Can Create User')
                     <div class="col-md-6">
                         <div class="form-group">
                             <tr>
@@ -39,7 +38,6 @@ Agrinesia Mitra Dashboard | User Management
                             </tr>
                         </div>
                     </div>
-                    @endcan
                     <div class="col-md-6">
                         <div class="modal fade" id="basic" tabindex="-1" role="dialog" aria-hidden="true">
                             <div class="modal-dialog">
@@ -48,7 +46,7 @@ Agrinesia Mitra Dashboard | User Management
                                     @csrf
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                                        <h4 class="modal-title">Tambah User Baru</h4>
+                                        <h4 class="modal-title">Add New User</h4>
                                     </div>
                                     <div class="modal-body">
                                         <div class="row">
@@ -112,7 +110,7 @@ Agrinesia Mitra Dashboard | User Management
                 				<th></th>
                 			</tr>
                 		</thead>
-                		<tbody>
+                		<tbody> 
                             @foreach($users as $key => $user)
                 			<tr>
                 				<td>{{ $key+1 }}</td>
@@ -126,10 +124,10 @@ Agrinesia Mitra Dashboard | User Management
                                     @endif            
                                 </td>
                 				<td>
-                                    @if($user->status_id == '2b643e21-a94c-4713-93f1-f1cbde6ad633')
-                                    <label class="label label-sm label-info">{{ $user->Statuses->name }}</label>
+                                    @if($user->status_id == '85b8605b-0232-425e-985f-642207002117')
+                                    <label class="label label-sm label-info">{{ $user->Statuses->status_name }}</label>
                                     @else
-                                    <label class="label label-sm label-danger">{{ $user->Statuses->name }}</label>
+                                    <label class="label label-sm label-danger">{{ $user->Statuses->status_name }}</label>
                                     @endif
                                 </td>
                 				<td>

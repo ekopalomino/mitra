@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->uuid('status_id')->nullable();
             $table->datetime('last_login_at')->nullable();
             $table->string('last_login_from')->nullable();
+            $table->string('sales_id')->nullable();
             $table->rememberToken();
             $table->primary('id');
             $table->timestamps();

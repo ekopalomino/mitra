@@ -15,6 +15,10 @@ class StatusTableSeeder extends Seeder
         $statuses = [
             'Active',
             'Inactive',
+            'New',
+            'On Process - Finance',
+            'On Process - Area Manager',
+            'Completed'
         ];
 
         foreach($statuses as $status) {
