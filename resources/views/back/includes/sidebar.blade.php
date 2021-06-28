@@ -109,7 +109,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="nav-item  ">
+            <li class="nav-item  {{ set_active('mitraReports.index') }}">
             	<a href="javascript:;" class="nav-link nav-toggle">
             		<i class="icon-grid"></i>
             		<span class="title">Reports</span>
@@ -121,7 +121,7 @@
                             <span class="title">Global Sales</span>
                         </a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item {{ set_active('mitraReports.index') }}">
                         <a href="{{ route('mitraReports.index') }}" class="nav-link ">
                             <span class="title">Mitra Sales</span>
                         </a>

@@ -2,6 +2,9 @@
 @section('header.title')
 Agrinesia Sales Dashboard | Mitra Sales Report
 @endsection
+@section('header.plugins')
+<link href="{{ asset('assets/global/plugins/bootstrap-multiselect/css/bootstrap-multiselect.css') }}" rel="stylesheet" type="text/css" />
+@endsection
 @section('content')
 <div class="page-content">
 	<div class="portlet box red ">
@@ -35,16 +38,23 @@ Agrinesia Sales Dashboard | Mitra Sales Report
                             		<div class="col-md-12">
                             			<div class="form-group">
 											<label class="control-label">Area</label>
-											{!! Form::select('areas', [null=>'Please Select'] + $areas,[], array('class' => 'form-control')) !!}
+											<select class="mt-multiselect btn btn-default" multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-height="300">
+												@foreach($areas as $area)
+												<option value="{{$area}}">{{$area}}</option>
+												@endforeach
+											</select>
 										</div>    		
 										<div class="form-group">
 											<label class="control-label">Mitra Name</label>
-											{!! Form::select('mitra_name', [null=>'Please Select'] + $mitra,[], array('class' => 'form-control')) !!}
+											<select class="mt-multiselect btn btn-default" multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-height="300">
+												@foreach($mitra as $cust)
+												<option value="{{$cust}}">{{$cust}}</option>
+												@endforeach
+											</select>
 										</div>
 										<div class="form-group">
 											<label class="control-label">Mitra Type</label>
-											<select id="single" name="supplier_code" class="form-control select2">
-												<option value="">Please Select</option>
+											<select class="mt-multiselect btn btn-default" multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-height="300">
 												<option value="1">Mitra A</option>
 												<option value="2">Mitra B</option>
 											</select>
@@ -74,7 +84,11 @@ Agrinesia Sales Dashboard | Mitra Sales Report
 										</div>
 										<div class="form-group">
 											<label class="control-label">Day</label>
-											{!! Form::select('days', [null=>'Please Select'] + $days,[], array('class' => 'form-control')) !!}
+											<select class="mt-multiselect btn btn-default" multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-height="300">
+												@foreach($days as $day)
+												<option value="{{$day}}">{{$day}}</option>
+												@endforeach
+											</select>
 										</div>
 									</div>
 								</div>
@@ -93,11 +107,19 @@ Agrinesia Sales Dashboard | Mitra Sales Report
                             		<div class="col-md-12">
                             			<div class="form-group">
 											<label class="control-label">Brand</label>
-											{!! Form::select('brands', [null=>'Please Select'] + $brands,[], array('class' => 'form-control')) !!}
+											<select class="mt-multiselect btn btn-default" multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-height="300">
+												@foreach($brands as $brand)
+												<option value="{{$brand}}">{{$brand}}</option>
+												@endforeach
+											</select>
 										</div>
 										<div class="form-group">
 											<label class="control-label">Varian</label>
-											{!! Form::select('varian', [null=>'Please Select'] + $varian,[], array('class' => 'form-control')) !!}
+											<select class="mt-multiselect btn btn-default" multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-height="300">
+												@foreach($varian as $var)
+												<option value="{{$var}}">{{$var}}</option>
+												@endforeach
+											</select>
 										</div>    		
 									</div>
 								</div>
@@ -115,4 +137,10 @@ Agrinesia Sales Dashboard | Mitra Sales Report
 		</div>
 	</div>
 </div>
+@endsection
+@section('footer.plugins')
+<script src="{{ asset('assets/global/plugins/bootstrap-multiselect/js/bootstrap-multiselect.js') }}" type="text/javascript"></script>
+@endsection
+@section('footer.scripts')
+<script src="{{ asset('assets/pages/scripts/components-bootstrap-multiselect.min.js') }}" type="text/javascript"></script>
 @endsection
