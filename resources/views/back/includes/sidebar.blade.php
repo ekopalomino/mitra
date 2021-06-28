@@ -25,11 +25,13 @@
                             <span class="title">User Lists</span>
                         </a>
                     </li>
+                    @can('disable')
                     <li class="nav-item ">
                         <a href="" class="nav-link ">
                             <span class="title">User Roles</span>
                         </a>
                     </li>
+                    @endcan
                     <li class="nav-item {{ set_active('activity.index') }}">
                         <a href="{{ route('activity.index') }}" class="nav-link ">
                             <span class="title">Activity Log</span>
@@ -49,6 +51,7 @@
                             <span class="title">Mitra Sales</span>
                         </a>
                     </li>
+                    @can('disable')
                     <li class="nav-item {{ set_active('newMitra.index') }}">
                         <a href="{{ route('newMitra.index') }}" class="nav-link ">
                             <span class="title">New Mitra Status</span>
@@ -59,6 +62,7 @@
                             <span class="title">Mitra Performance</span>
                         </a>
                     </li>
+                    @endcan
                 </ul>
             </li>
             <li class="nav-item  ">
@@ -95,6 +99,7 @@
                     </li>
                 </ul>
             </li>
+            @can('disable')
             <li class="nav-item  ">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="icon-grid"></i>
@@ -109,6 +114,7 @@
                     </li>
                 </ul>
             </li>
+            @endcan
             <li class="nav-item  {{ set_active('mitraReports.index') }}">
             	<a href="javascript:;" class="nav-link nav-toggle">
             		<i class="icon-grid"></i>
@@ -116,21 +122,25 @@
                     <span class="arrow"></span>
                 </a>
                 <ul class="sub-menu">
+                    @can('disable')
                     <li class="nav-item ">
                         <a href="" class="nav-link ">
                             <span class="title">Global Sales</span>
                         </a>
                     </li>
+                    @endcan
                     <li class="nav-item {{ set_active('mitraReports.index') }}">
                         <a href="{{ route('mitraReports.index') }}" class="nav-link ">
                             <span class="title">Mitra Sales</span>
                         </a>
                     </li>
+                    @can('disable')
                     <li class="nav-item ">
                         <a href="" class="nav-link ">
                             <span class="title">Store Sales</span>
                         </a>
                     </li>
+                    @endcan
                 </ul>
             </li>
         </ul>

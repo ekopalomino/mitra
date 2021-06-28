@@ -20,4 +20,18 @@ class ReportController extends Controller
         
         return view('back.pages.mitraReports',compact('areas','mitra','days','brands','varian'));
     }
+
+    public function executeReports(Request $request)
+    {
+       $mitra = $request->input('mitra');
+       $types = $request->input('mitra_type');
+       $from = $request->input('from_date');
+       $to = $request->input('to_date');
+       $day = $request->input('day');
+       $brands = $request->input('brand');
+       $variants = $request->input('variant');
+       
+       $data = MitraSale::whereIn('area_code',$area)->get();
+       dd($source);
+    }
 }

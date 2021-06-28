@@ -40,4 +40,5 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function() {
     Route::post('mitra-monitoring/new-register/upload','Admin\SalesController@newMitraImport')->name('newMitra.import');
 
     Route::get('report/mitra-sales','Admin\ReportController@mitraReports')->name('mitraReports.index');
+    Route::post('report/mitra-sales/search','Admin\ReportController@executeReports')->name('executeReports.store');
 });

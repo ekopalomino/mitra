@@ -24,6 +24,8 @@ Agrinesia Sales Dashboard | Mitra Sales Report
 				</ul>
 			</div>
 			@endif
+			{!! Form::open(array('route' => 'executeReports.store','method'=>'POST', 'class' => 'horizontal-form')) !!}
+			@csrf
 			<div class="form-body">
 				<div class="row">
 					<div class="col-md-4">
@@ -38,7 +40,7 @@ Agrinesia Sales Dashboard | Mitra Sales Report
                             		<div class="col-md-12">
                             			<div class="form-group">
 											<label class="control-label">Area</label>
-											<select class="mt-multiselect btn btn-default" multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-height="300">
+											<select class="mt-multiselect btn btn-default" name="area_code[]" multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-height="300">
 												@foreach($areas as $area)
 												<option value="{{$area}}">{{$area}}</option>
 												@endforeach
@@ -46,7 +48,7 @@ Agrinesia Sales Dashboard | Mitra Sales Report
 										</div>    		
 										<div class="form-group">
 											<label class="control-label">Mitra Name</label>
-											<select class="mt-multiselect btn btn-default" multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-height="300">
+											<select class="mt-multiselect btn btn-default" name="mitra[]"multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-height="300">
 												@foreach($mitra as $cust)
 												<option value="{{$cust}}">{{$cust}}</option>
 												@endforeach
@@ -54,7 +56,7 @@ Agrinesia Sales Dashboard | Mitra Sales Report
 										</div>
 										<div class="form-group">
 											<label class="control-label">Mitra Type</label>
-											<select class="mt-multiselect btn btn-default" multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-height="300">
+											<select class="mt-multiselect btn btn-default" name="mitra_type[]"multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-height="300">
 												<option value="1">Mitra A</option>
 												<option value="2">Mitra B</option>
 											</select>
@@ -84,7 +86,7 @@ Agrinesia Sales Dashboard | Mitra Sales Report
 										</div>
 										<div class="form-group">
 											<label class="control-label">Day</label>
-											<select class="mt-multiselect btn btn-default" multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-height="300">
+											<select class="mt-multiselect btn btn-default" name="day[]"multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-height="300">
 												@foreach($days as $day)
 												<option value="{{$day}}">{{$day}}</option>
 												@endforeach
@@ -107,7 +109,7 @@ Agrinesia Sales Dashboard | Mitra Sales Report
                             		<div class="col-md-12">
                             			<div class="form-group">
 											<label class="control-label">Brand</label>
-											<select class="mt-multiselect btn btn-default" multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-height="300">
+											<select class="mt-multiselect btn btn-default" name="brand[]"multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-height="300">
 												@foreach($brands as $brand)
 												<option value="{{$brand}}">{{$brand}}</option>
 												@endforeach
@@ -115,7 +117,7 @@ Agrinesia Sales Dashboard | Mitra Sales Report
 										</div>
 										<div class="form-group">
 											<label class="control-label">Varian</label>
-											<select class="mt-multiselect btn btn-default" multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-height="300">
+											<select class="mt-multiselect btn btn-default" name="variant[]"multiple="multiple" data-label="left" data-width="100%" data-filter="true" data-height="300">
 												@foreach($varian as $var)
 												<option value="{{$var}}">{{$var}}</option>
 												@endforeach
@@ -143,4 +145,9 @@ Agrinesia Sales Dashboard | Mitra Sales Report
 @endsection
 @section('footer.scripts')
 <script src="{{ asset('assets/pages/scripts/components-bootstrap-multiselect.min.js') }}" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#area').multiselect();
+    });
+</script>
 @endsection
